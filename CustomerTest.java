@@ -22,13 +22,8 @@ public class CustomerTest {
         Rental rental_c  = new Rental(c, 3);
         fregues.addRental(rental_c);
 
-        String cor = "Rental Record for Vaginildo\n";
-        cor += "\tA volta dos que não foram\t2.0\n";
-        cor += "\tO penteado do rei Careca\t6.5\n";
-        cor += "\tNunca morri na minha vida\t2.0\n";
-        cor += "Amount owed is 9.5\n";
-        cor  += "You earned 4 frequent renter points";
-        assertEquals(correct, fregues.statement());
+        String cor = "Rental Record for Vaginildo\n\tA volta dos que não foram\t2.0\n\tO penteado do rei Careca\t6.5\n\tNunca morri na minha vida\t2.0\nAmount owed is 9.5\nYou earned 4 frequent renter points";
+        assertEquals(cor, fregues.statement());
     }
 
 }
